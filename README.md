@@ -104,7 +104,7 @@ Twenty tools, grouped by what they do. Every tool declares whether it is read-on
 |---|---|
 | `meetings_create` | Send the notetaker to a live Zoom, Google Meet, or Microsoft Teams call, or transcribe a Google Drive recording |
 | `meetings_stop` | Stop the notetaker's recording of an ongoing meeting |
-| `meetings_update_notes` | Edit notes sections or the title. The Visual Note is redrawn by default, which uses coins |
+| `meetings_update_notes` | Edit notes sections or the title. Editing sections redraws the Visual Note by default, which uses coins; renaming alone does not |
 | `meetings_tag` | Apply your existing tags to a meeting |
 | `meetings_share` | Turn on a public link, PIN-protected by default |
 | `meetings_export` | Export a meeting to your Drive |

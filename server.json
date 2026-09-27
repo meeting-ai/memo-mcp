@@ -5,15 +5,13 @@
   "description": "Let AI assistants record meetings and work with notes, transcripts, contacts, and Drive.",
   "version": "1.0.0",
   "websiteUrl": "https://meeting.ai/mcp",
-  "repository": {
-    "url": "https://github.com/meeting-ai/memo-mcp",
-    "source": "github"
-  },
   "icons": [
     {
       "src": "https://meeting.ai/apple-touch-icon.png",
       "mimeType": "image/png",
-      "sizes": ["180x180"]
+      "sizes": [
+        "180x180"
+      ]
     }
   ],
   "remotes": [
