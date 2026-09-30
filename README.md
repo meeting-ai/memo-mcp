@@ -15,6 +15,10 @@ recaps, export, share, and create Visual Notes, all inside your own Meeting.ai a
 
 **Server URL:** `https://mcp.meeting.ai/mcp`
 
+**Official MCP Registry:** listed as
+[`ai.meeting/memo-mcp`](https://registry.modelcontextprotocol.io/v0.1/servers/ai.meeting%2Fmemo-mcp/versions/latest)
+on the [official MCP Registry](https://registry.modelcontextprotocol.io).
+
 Authentication is OAuth through Meeting.ai's own login. There is no API key. Sign in with the
 account you use for the Meeting.ai app, approve the connection, and revoke it any time from
 Connected Apps in the Meeting.ai web app. If you do not have an account yet, create one at
