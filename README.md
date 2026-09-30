@@ -82,6 +82,47 @@ Some actions, such as recording, exporting, Visual Notes, and media generation, 
 Meeting.ai subscription or coins. If your account has no active subscription or coins, the
 assistant tells you and stops.
 
+## Tools
+
+Twenty tools, grouped by what they do. Every tool declares whether it is read-only or can change or remove data, so your assistant can ask before it acts.
+
+**Read**
+
+| Tool | What it does |
+|---|---|
+| `meetings_search` | Find meetings by keyword across titles, notes, and transcripts, or list them by date |
+| `meetings_notes` | One meeting's details and AI notes, section by section |
+| `meetings_transcript` | The full transcript, one page at a time |
+| `meetings_transcript_search` | Find where something was said in one meeting |
+| `contacts_search` | Search the people you have met |
+| `drive_search` | Search your Drive files |
+| `workspace_list` | The workspaces your account belongs to |
+
+**Write**
+
+| Tool | What it does |
+|---|---|
+| `meetings_create` | Send the notetaker to a live Zoom, Google Meet, or Microsoft Teams call, or transcribe a Google Drive recording |
+| `meetings_stop` | Stop the notetaker's recording of an ongoing meeting |
+| `meetings_update_notes` | Edit notes sections or the title. Editing sections redraws the Visual Note by default, which uses coins; renaming alone does not |
+| `meetings_tag` | Apply your existing tags to a meeting |
+| `meetings_share` | Turn on a public link, PIN-protected by default |
+| `meetings_export` | Export a meeting to your Drive |
+| `contacts_update` | Edit a contact's name, email, role, or company |
+| `drive_rename` | Rename a Drive file |
+| `drive_tag` | Apply existing tags to a Drive file |
+| `workspace_set_active` | Change which workspace the connection uses by default |
+
+**Create media (uses coins)**
+
+| Tool | What it does |
+|---|---|
+| `recipe_visual_note` | Turn content into a one-page Visual Note |
+| `media_image_gen` | Generate an image |
+| `media_audio_gen` | Turn text into speech |
+
+Exports and generated media are saved to your Meeting.ai Drive.
+
 ## Links
 
 - Connection guide, for Claude and other assistants: https://meeting.ai/mcp
