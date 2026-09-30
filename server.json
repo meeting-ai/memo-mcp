@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.meeting-ai/memo-mcp",
+  "name": "ai.meeting/mcp",
   "title": "Meeting.ai",
   "description": "Let AI assistants record meetings and work with notes, transcripts, contacts, and Drive.",
   "version": "1.0.0",
