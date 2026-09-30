@@ -1,0 +1,36 @@
+name: Publish to MCP Registry
+
+# Runs only when started by hand from the Actions tab.
+# Bump "version" in server.json before each run: the registry rejects a version it already has.
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # lets mcp-publisher sign in as the meeting-ai org (io.github.meeting-ai/*)
+      contents: read
+    env:
+      MCP_PUBLISHER_VERSION: v1.8.1
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install mcp-publisher
+        run: |
+          base="https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}"
+          curl -fsSLO "${base}/mcp-publisher_linux_amd64.tar.gz"
+          curl -fsSLO "${base}/registry_${MCP_PUBLISHER_VERSION#v}_checksums.txt"
+          sha256sum --check --ignore-missing "registry_${MCP_PUBLISHER_VERSION#v}_checksums.txt"
+          tar xzf mcp-publisher_linux_amd64.tar.gz mcp-publisher
+
+      - name: Validate server.json
+        run: ./mcp-publisher validate server.json
+
+      - name: Sign in to the MCP Registry
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish server.json
+        run: ./mcp-publisher publish server.json
